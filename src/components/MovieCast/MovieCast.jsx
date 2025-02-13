@@ -36,6 +36,7 @@ axios.defaults.headers.common['Authorization'] = `Bearer ${API_TOKEN}`;
   }, [movieId])
   return (
     <div>
+      {cast.length ===0 && <p>There is no information about the cast.</p>}
       <ul className={s.castList}>
         {cast.map(({ id, name, character, profile_path }) => <li key={`${id}${crypto.randomUUID()}`} className={s.cardOfCast}>
           <img src={`https://image.tmdb.org/t/p/w500/${profile_path}`} alt={name} width={200} height={300}/>
