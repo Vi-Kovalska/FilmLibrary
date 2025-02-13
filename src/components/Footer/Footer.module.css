@@ -1,0 +1,30 @@
+.footerContainer{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: auto;
+        height: 200px;
+        background-image: linear-gradient(rgba(20, 21, 29, 0.37),
+                rgba(0, 0, 0, 0.747)), url(../Header/header-bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        color: white;
+        padding: 20px;
+        margin-top: 10px; 
+}
+.adressList{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+.contactsLink{
+    color: white;
+    &:hover, &:focus{
+        font-size: 18px;
+        text-decoration: underline;
+    }
+}

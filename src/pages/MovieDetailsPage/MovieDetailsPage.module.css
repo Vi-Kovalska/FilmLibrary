@@ -1,0 +1,39 @@
+.containerDetails{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.infoContainer{
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 60px 20px 60px;
+}
+.linkContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.link {
+    font-size: 18px;
+    color: #646cff;
+}
+
+.link.active {
+    font-size: 20px;
+    color: rgb(103, 97, 185);
+    text-decoration: underline;
+}
+.genresParagraf{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.linkGoBack{
+    border: 1px solid #646cff ;
+    border-radius: 4px;
+}

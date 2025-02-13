@@ -1,0 +1,14 @@
+.containerHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: auto;
+    height: 100px;
+    background-image: linear-gradient(rgba(20, 21, 29, 0.37),
+     rgba(0, 0, 0, 0.747)), url(./header-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 10px;
+} 

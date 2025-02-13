@@ -1,0 +1,14 @@
+.navigation{
+        display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+}
+.link{
+font-size: 40px;
+color: #646cff;
+}
+.link.active{
+color: white;
+text-decoration: underline;
+}
