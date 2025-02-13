@@ -49,7 +49,7 @@ async function fetchMovieById(id) {
 
   return (
     <>
-      <Link className={s.linkGoBack} to={location.state}> ⬅ Go back</Link>
+      <Link className={s.linkGoBack} to={location.state ?? '/movies'}> ⬅ Go back</Link>
       <div className={s.containerDetails}>
         <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt={taglin} />
         <div className={s.infoContainer}>
