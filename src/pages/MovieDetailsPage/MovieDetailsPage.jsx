@@ -1,4 +1,4 @@
-import { React, useEffect, useState} from 'react'
+import { React, useEffect, useRef, useState} from 'react'
 import axios from 'axios'
 import s from './MovieDetailsPage.module.css'
 import { Link, NavLink, Outlet, useLocation, useParams } from 'react-router-dom'
@@ -6,6 +6,7 @@ import clsx from 'clsx';
 // import fetchMovieById from '.../services/api'
 export default function MovieDetailsPage() {
   const location = useLocation();
+  const goBackUrl = useRef(location?.state ?? './movies');
 
   const [details, setDetails] = useState(null);
   const [isError, setIsError] = useState(false);
@@ -49,7 +50,7 @@ async function fetchMovieById(id) {
 
   return (
     <>
-      <Link className={s.linkGoBack} to={location.state ?? '/movies'}> ⬅ Go back</Link>
+      <Link className={s.linkGoBack} to={goBackUrl.current}> ⬅ Go back</Link>
       <div className={s.containerDetails}>
         <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt={taglin} />
         <div className={s.infoContainer}>
