@@ -1,9 +1,8 @@
 .footerContainer{
     display: flex;
-        justify-content: center;
         align-items: center;
         gap: 20px;
-        width: auto;
+        min-width: 320px;
         height: 200px;
         background-image: linear-gradient(rgba(20, 21, 29, 0.37),
                 rgba(0, 0, 0, 0.747)), url(../Header/header-bg.jpg);
@@ -11,7 +10,7 @@
         background-position: center;
         background-size: cover;
         color: white;
-        padding: 20px;
+        padding: 0 5px;
         margin-top: 10px; 
 }
 .adressList{
@@ -20,11 +19,58 @@
     justify-content: center;
     align-items: flex-start;
     gap: 10px;
+
+    font-size: 14px;
+    
+    width: 150px;
 }
 .contactsLink{
     color: white;
     &:hover, &:focus{
-        font-size: 18px;
+        font-size: 16px;
         text-decoration: underline;
     }
+}
+.titleFooter{
+    font-size: 20px;
+    width: 100px;
+}
+
+@media screen and (min-width: 768px) {
+    .adressList {
+    font-size: 16px;
+    width: 300px;
+    }
+.footerContainer {
+    padding: 20px;
+    justify-content: center;
+    width: auto;
+}
+    .titleFooter {
+            font-size: 24px;
+            width: 200px;
+    }
+        .contactsLink {
+            &:hover,
+            &:focus {
+                font-size: 18px;
+            }
+        }
+}
+@media screen and (min-width: 1400px) {
+    .titleFooter {
+            font-size: 28px;
+            width: 300px;
+        }
+                .adressList {
+                    font-size: 20px;
+                    width: 350px;
+                }
+                                   .contactsLink {
+                
+                                       &:hover,
+                                       &:focus {
+                                           font-size: 24px;
+                                       }
+                                   }
 }

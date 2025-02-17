@@ -28,7 +28,8 @@ async function fetchMovieById(id) {
   const {movieId} = useParams();
 
   useEffect(() => {
-    const getMovieById = async () => {
+    const asyncWrapper = async () => {
+      if (!movieId) return;
       try {
         setIsError(false);
         setIsLoading(true);
@@ -40,7 +41,7 @@ async function fetchMovieById(id) {
         setIsLoading(false);
       }
     }
-    getMovieById();
+    asyncWrapper();
   }, [movieId])
 
     if (!details) {

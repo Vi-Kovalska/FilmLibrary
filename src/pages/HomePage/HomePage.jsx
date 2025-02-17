@@ -12,7 +12,7 @@ const HomePage = () => {
   const [trending, setTrending] = useState([]);
 
   useEffect(() => {
-    const getMovies = async () => {
+    const asyncWrapper = async () => {
       try {
         setIsError(false);
         setIsLoading(true);
@@ -25,7 +25,7 @@ const HomePage = () => {
         setIsLoading(false);
       }
     }
-    getMovies();
+    asyncWrapper();
   }, [setTrending])
 
   return (

@@ -4,7 +4,7 @@ const Footer
  = () => {
   return (
       <div className={s.footerContainer}>
-<h2>Cooperation and proposals:</h2>
+<h2 className={s.titleFooter}>Cooperation and proposals:</h2>
           <address >
               <ul className={s.adressList}>
                   <li>

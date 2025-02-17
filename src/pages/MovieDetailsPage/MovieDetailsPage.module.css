@@ -1,14 +1,16 @@
 .containerDetails{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 320px;
+        margin-bottom: 15px;
 }
 .infoContainer{
-    height: 750px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    padding: 40px 60px 20px 60px;
+    gap: 10px;
+    padding: 10px;
 }
 .linkContainer {
     display: flex;
@@ -23,6 +25,7 @@
     color: #646cff;
 }
 
+
 .link.active {
     font-size: 20px;
     color: rgb(103, 97, 185);
@@ -36,4 +39,17 @@
 .linkGoBack{
     border: 1px solid #646cff ;
     border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+    .containerDetails {
+        flex-direction: row;
+        width: auto;
+        height: 750px;
+        overlay: scroll;
+        margin-bottom: 20px;
+    }
+        .infoContainer {
+    gap: 20px;
+    padding: 40px 60px 20px 60px;
+        }
 }

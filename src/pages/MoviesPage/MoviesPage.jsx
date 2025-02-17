@@ -35,7 +35,7 @@ axios.defaults.headers.common['Authorization'] = `Bearer ${API_TOKEN}`;
 
     if (!query) return;
 
-    const getMoviesByQuery = async () => {
+    const asyncWrapper = async () => {
       try {
         setIsError(false);
         setIsLoading(true);
@@ -50,7 +50,7 @@ axios.defaults.headers.common['Authorization'] = `Bearer ${API_TOKEN}`;
         setIsLoading(false);
       }
     }
-    getMoviesByQuery();
+    asyncWrapper();
   }, [query, page]);
 
   const getNewQuery = (newQuery) => {
