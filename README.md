@@ -1,6 +1,6 @@
 Project name
 - FilmLibrary
-- 
+
 Description
 - This web-application for searching films and information about them from API.
 
